@@ -1,0 +1,18 @@
+body{
+    font-family: 'Inter', sans-serif;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list-item{
+    list-style: none;
+    display: flex;
+}
+.list-item > li{
+    padding: 0 10px;
+}
+.logo{
+    width: 60px;
+}
