@@ -1,19 +1,23 @@
-import React from "react";
-import Main from "./components/Main";
-import Navbar from "./components/Navbar";
+import React, {useState} from "react";
+import Main from "./components/react-facts/Main";
+import Navbar from "./components/react-facts/Navbar";
 // import Header from "./Header"
 // import Footer from "./Footer"
 // import MainContent from "./MainContent"
 
 export default function App (){
+    const [darkMode, setDarkMode] = useState(true);
+    function handleModeChange(){
+        return setDarkMode(prevMode => !prevMode)
+    }
+
     return (
         <section>
-            {/* <Header />
-            <MainContent />
-            <Footer /> */}
-
-            <Navbar />
-            <Main />
+            <Navbar 
+                darkMode={darkMode}
+                toggleDarkMode={handleModeChange}
+            />
+            <Main darkMode={darkMode} />
         </section>
     )
 }
